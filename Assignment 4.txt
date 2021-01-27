@@ -1,0 +1,59 @@
+QUESTION 1:
+
+By how many ways we can access elements in the DOM and write about them in brief?
+
+i)  The DOM is the way Javascript sees its containing pages' data. It is an object that includes how the HTML/XHTML/XML is formatted, as well as the browser state.
+ii) A DOM element is something like a DIV, HTML, BODY element on a page.
+iii)You can add classes to all of these using CSS, or interact with them using JS, below are some of examples.
+
+
+1)getElementsByTagName()
+
+i)This method will return an array of all the elements you specify between the parentheses.
+
+2)getElementById()
+
+i) This method is perfect if you want to target one specific element. 
+ii)It uses the id attribute of an element in order to access that element. Beware the id must be unique.
+
+4)document.getElementsByClassName()
+
+i) This method uses the class attribute of an element in order to gain access to it.
+ii)This allows you to be more specific than .getElementsByTagName() because it will only return the elements that contain the class name you specify within the parentheses.
+
+5)document.querySelectorAll
+
+i) We can use this method to collect all of the elements that match a specific query. This query is specified within the parentheses.
+
+6).querySelector( )
+
+i) In a way this method is the counterpart to the previous method discussed. 
+ii)This method returns the first element within the document object that satisfies the CSS selector you provide within the parentheses.
+
+QUESTION 2:
+
+HTML code:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reading status of a book library</title>
+</head>
+<body>
+<script src="Addition.js"></script>
+Number one<input  id = "number1" ></input>
+Number two<input  id = "number2" ></input>
+<input  id = "aaa" >
+add<button onclick="addition()"></button>
+</body>
+</html>
+
+JS code:
+
+function addition()
+{
+var num1 = Number(document.getElementById("number1").value)
+var num2 = Number(document.getElementById("number2").value)
+var result = parseFloat(num1) + parseFloat(num2)
+document.getElementById("aaa").value = result;
+}
