@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reading status of a book library</title>
+</head>
+<body>
+<script src="Books.js"></script>
+</body>
+</html>
+
+   
+
+js:
+
+var library = [ 
+  {
+      title: 'Bill Gates',
+      author: 'The Road Ahead',
+      readingStatus: true
+  },
+  {
+      title: 'Steve Jobs',
+      author: 'Walter Isaacson',
+      readingStatus: true
+  },
+  {
+      title: 'Mockingjay: The Final Book of The Hunger Games',
+      author: 'Suzanne Collins',
+      readingStatus: false
+  }];
+
+for(var i=0; i<library.length; i++)
+{
+  var Book =("The book name is "+ library[i].title +" and the author is " + library[i].author+".");
+ if(library[i].readingStatus)
+  {
+    console.log("Already read the book, " + Book); 
+  }
+  else
+   {
+
+   console.log("Not read the book, " + Book);  }
+}
